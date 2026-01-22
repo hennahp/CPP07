@@ -44,6 +44,7 @@ Array<T> &Array<T>::operator=(const Array &other)
 template <typename T>
 Array<T>::~Array()
 {
+    
     delete[] _elements;
 }
 
