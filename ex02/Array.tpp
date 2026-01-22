@@ -44,12 +44,20 @@ Array<T> &Array<T>::operator=(const Array &other)
 template <typename T>
 Array<T>::~Array()
 {
-    
+
     delete[] _elements;
 }
 
 template <typename T>
 T &Array<T>::operator[](unsigned int index)
+{
+    if(index >= _size)
+        throw std::out_of_range("Array index out of bounds");
+    return _elements[index];
+}
+
+template <typename T>
+const T &Array<T>::operator[](unsigned int index) const
 {
     if(index >= _size)
         throw std::out_of_range("Array index out of bounds");
