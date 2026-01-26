@@ -55,6 +55,11 @@ int main()
     iter(arrFloat, lenFloat, printFloat);
     std::cout << std::endl;
 
+    std::cout << BLUE << "Testing const correctness with float array:" << RESET << std::endl;
+    const float constArrFloat[] = {4.4f, 5.5f, 6.6f};
+    iter(constArrFloat, lenFloat, printFloat);
+    std::cout << std::endl;
+
     std::cout << BLUE << "Iterating over string array:" << RESET << std::endl;
     iter(arrString, lenString, printString);
     std::cout << std::endl;
