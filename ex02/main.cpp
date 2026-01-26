@@ -54,6 +54,13 @@ int main()
         std::cout << "Accessing stringArray[1]: " << stringArray[1] << std::endl;
         std::cout << "Accessing copyArray[4]: " << copyArray[4] << std::endl;
         std::cout << std::endl;
+        std::cout << BLUE << "Acccessing const array elements" RESET << std::endl;
+        std::cout << BLUE << "----------------------------------------" << RESET << std::endl;
+        const Array<int> constIntArray = intArray;
+        std::cout << "constIntArray[3]: " << constIntArray[3] << std::endl;
+        const Array<std::string> constStringArray = stringArray;
+        std::cout << "constStringArray[0]: " << constStringArray[0] << std::endl;
+        std::cout << std::endl;
         std::cout << BLUE << "Testing out of bounds access" RESET << std::endl;
         std::cout << BLUE << "----------------------------------------" << RESET << std::endl;
         std::cout << "Accessing intArray[10] (out of bounds):"
